@@ -39,6 +39,14 @@ class TestBowlingGame(unittest.TestCase):
         self.game.roll(1)
         self.rollMany(0,12)
         self.assertEqual(44, self.game.score())
+
+    def testTwoStrikeScores(self):
+        self.game.roll(10)
+        self.game.roll(10)
+        self.game.roll(4)
+        self.game.roll(2)
+        self.rollMany(0,16)
+        self.assertEqual(46, self.game.score())
     
     def rollMany(self, pins,rolls):
         for i in range(rolls):
