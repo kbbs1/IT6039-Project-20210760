@@ -48,6 +48,17 @@ class TestBowlingGame(unittest.TestCase):
         self.rollMany(0,16)
         self.assertEqual(46, self.game.score())
     
+    def testTwoSpareScores(self):
+        self.game.roll(3)
+        self.game.roll(5)
+        self.game.roll(6)
+        self.game.roll(4)
+        self.game.roll(8)
+        self.game.roll(2)
+        self.rollMany(0,14)
+        self.assertEqual(36, self.game.score())
+    
+
     def rollMany(self, pins,rolls):
         for i in range(rolls):
             self.game.roll(pins)
