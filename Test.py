@@ -23,7 +23,7 @@ class TestBowlingGame(unittest.TestCase):
         self.game.roll(4)
         self.game.roll(3)
         self.rollMany(0,16)
-        self.assertEqual(28, self.game.score())
+        self.assertEqual(24, self.game.score())
 
     def testPerfectGame(self):
         self.rollMany(10,12)
