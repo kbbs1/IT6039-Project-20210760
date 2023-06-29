@@ -28,6 +28,17 @@ class TestBowlingGame(unittest.TestCase):
     def testPerfectGame(self):
         self.rollMany(10,12)
         self.assertEqual(300, self.game.score())
+
+    def testComboGame(self):
+        self.game.roll(10)
+        self.game.roll(8)
+        self.game.roll(2)
+        self.game.roll(3)
+        self.game.roll(2)
+        self.game.roll(5)
+        self.game.roll(1)
+        self.rollMany(0,12)
+        self.assertEqual(10, self.game.score())
     
     def rollMany(self, pins,rolls):
         for i in range(rolls):
