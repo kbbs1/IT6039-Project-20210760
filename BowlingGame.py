@@ -1,8 +1,10 @@
 class BowlingGame:
     def __init__(self):
+        """Initialize list"""
         self.rolls=[]
 
     def roll(self,pins):
+        """Appends results to list"""
         self.rolls.append(pins)
 
     def score(self):

@@ -38,7 +38,7 @@ class TestBowlingGame(unittest.TestCase):
         self.game.roll(5)
         self.game.roll(1)
         self.rollMany(0,12)
-        self.assertEqual(44, self.game.score())
+        self.assertEqual(44 , self.game.score())
 
     def testTwoStrikeScores(self):
         self.game.roll(10)
