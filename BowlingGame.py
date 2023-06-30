@@ -20,10 +20,10 @@ class BowlingGame:
         result = 0
         rollIndex=0
         for frameIndex in range(10):
-            if self.rolls(rollIndex)==10:
+            if self.rolls[rollIndex]==10:
                 result += 10+ self.rolls[rollIndex+1]+ self.rolls[rollIndex+2]
                 rollIndex +=1
-            elif self.rolls(rollIndex)+self.rolls[rollIndex+1]==10:
+            elif self.rolls[rollIndex]+self.rolls[rollIndex+1]==10:
                 result += 10+ self.rolls[rollIndex+2]
                 rollIndex +=2
             else:
