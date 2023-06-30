@@ -94,7 +94,7 @@ class TestBowlingGame(unittest.TestCase):
         self.rollMany(10,12)
         self.assertEqual(300, self.game.score())
 
-    def testComboGame(self):
+    def testCombinationGame(self):
         """
         Method to test if score calculated matches expected score, for when there is a strike, spare, and random numbers of pin scores.
 
